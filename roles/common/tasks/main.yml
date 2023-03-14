@@ -1,0 +1,8 @@
+---
+- name: Create apache a container
+  docker_container:
+    name: webapp
+    image: httpd
+    ports:
+      - "80:80"
+            
