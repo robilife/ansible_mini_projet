@@ -2,6 +2,8 @@
 - name: "Installation d'un conteneur apache"
   hosts: prod
   become: true
+  vars:
+    system_user: admin
   pre_tasks:
     - name: install Epel repo
       package: 
@@ -19,4 +21,4 @@
       pip:
         name: docker-py
   roles:
-    - role: '/roles/common'
+    - common
